@@ -1,0 +1,23 @@
+<nav>
+  <mat-toolbar color="primary">
+    <a mat-button>Home</a>
+    <a mat-button>Projects</a>
+    <a mat-button routerLink="/custom-components">Components</a>
+    <a mat-button>About</a>
+    <button mat-button class="ml-auto">
+      <mat-icon aria-label="search">search </mat-icon>
+    </button>
+    <button mat-button (click)="toggleOpen()" class="burger">
+      <mat-icon aria-label="menu">menu </mat-icon>
+    </button>
+  </mat-toolbar>
+</nav>
+<mat-sidenav-container>
+  <mat-sidenav mode="push" #sidenav mode="'side'" [(opened)]="opened">
+    <a mat-button>Home</a>
+    <a mat-button>Projects</a>
+    <a mat-button routerLink="/custom-components">Components</a>
+    <a mat-button>About</a>
+  </mat-sidenav>
+  <ng-content></ng-content>
+</mat-sidenav-container>

@@ -1,0 +1,24 @@
+mat-toolbar {
+  height: auto;
+  padding: 0.4rem 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  mat-toolbar a {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+    mat-toolbar .burger {
+      display: none;
+    }
+  }
