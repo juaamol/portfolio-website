@@ -1,8 +1,7 @@
-<div *ngFor="let meta of metasArray | async">
-  <app-open-graph-card
-    [imageSrc]="meta.imageSrc"
-    [url]="meta.url"
-    [description]="meta.description"
-    [title]="meta.title"
-  ></app-open-graph-card>
-</div>
+<app-open-graph-card
+  *ngFor="let meta of metasArray | async"
+  [imageSrc]="meta.imageSrc"
+  [url]="meta.url"
+  [description]="meta.description"
+  [title]="meta.title"
+></app-open-graph-card>

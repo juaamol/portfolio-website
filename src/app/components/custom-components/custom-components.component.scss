@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+app-open-graph-card {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}

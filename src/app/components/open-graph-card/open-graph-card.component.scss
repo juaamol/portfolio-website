@@ -4,7 +4,7 @@ $border-radius: 6px;
 
 :host {
   display: inline-block;
-  background-color: $secondary;
+  border: solid 2px $secondary;
   width: auto;
 
   border-radius: $border-radius;
