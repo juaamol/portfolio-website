@@ -1,1 +1,10 @@
-<p>open-graph-card works!</p>
+<a [href]="url">
+  <figure>
+    <img [src]="imageSrc" [alt]="title" />
+
+    <figcaption>
+      <h2 class="my-0">{{ title }}</h2>
+      {{ description }}
+    </figcaption>
+  </figure>
+</a>

@@ -1,0 +1,33 @@
+@import "../../../themes/_variables.scss";
+
+$border-radius: 6px;
+
+:host {
+  display: inline-block;
+  background-color: $secondary;
+  width: auto;
+
+  border-radius: $border-radius;
+}
+
+:link,
+:visited {
+  color: white;
+  text-decoration-line: none;
+}
+
+img {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  height: 200px;
+  width: 350px;
+  display: block;
+}
+
+figure {
+  margin: 0;
+
+  figcaption {
+    padding: 0.5rem 1rem;
+  }
+}
