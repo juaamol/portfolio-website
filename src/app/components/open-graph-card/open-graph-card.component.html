@@ -1,10 +1,14 @@
-<a [href]="url">
-  <figure>
-    <img [src]="imageSrc" [alt]="title" />
-
-    <figcaption>
-      <h2 class="my-0">{{ title }}</h2>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="imageSrc" [alt]="title">
+  <mat-card-content>
+    <p>
       {{ description }}
-    </figcaption>
-  </figure>
-</a>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-flat-button color="primary">Demo</a>
+  </mat-card-actions>
+</mat-card>

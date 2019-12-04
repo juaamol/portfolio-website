@@ -1,7 +1,18 @@
-<app-open-graph-card
-  *ngFor="let meta of metasArray | async"
-  [imageSrc]="meta.imageSrc"
-  [url]="meta.url"
-  [description]="meta.description"
-  [title]="meta.title"
-></app-open-graph-card>
+<section>
+  <h1>Custom components</h1>
+  <p>
+    A list of some components made with HTML and CSS (Sometimes a bit of
+    Javascript).<br />
+    This components are made with customization in mind so, things like colors,
+    sizes... among others can be changed.
+  </p>
+  <div class="main-content">
+    <app-open-graph-card
+      *ngFor="let meta of metasArray | async"
+      [imageSrc]="meta.imageSrc"
+      [url]="meta.url"
+      [description]="meta.description"
+      [title]="meta.title"
+    ></app-open-graph-card>
+  </div>
+</section>

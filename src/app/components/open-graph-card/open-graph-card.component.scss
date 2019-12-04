@@ -1,33 +1,25 @@
 @import "../../../themes/_variables.scss";
 
-$border-radius: 6px;
+$img-height: 14rem;
+$max-card-width: 23rem;
 
 :host {
-  display: inline-block;
-  border: solid 2px $secondary;
-  width: auto;
-
-  border-radius: $border-radius;
-}
-
-:link,
-:visited {
-  color: white;
-  text-decoration-line: none;
+  width: 100%;
+  //height: $card-heigth;
+  //min-height: $card-heigth;
 }
 
 img {
-  border-top-left-radius: $border-radius;
-  border-top-right-radius: $border-radius;
-  height: 200px;
-  width: 350px;
-  display: block;
+  height: $img-height;
+  max-height: $img-height;
 }
 
-figure {
-  margin: 0;
+button {
+  background-color: $secondary;
+}
 
-  figcaption {
-    padding: 0.5rem 1rem;
+@media (min-width: 576px) {
+  :host {
+    width: $max-card-width;
   }
 }
