@@ -19,10 +19,18 @@ mat-sidenav-container {
   mat-toolbar a {
     display: none;
   }
+
+  mat-sidenav {
+    width: 75%;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 768px) {
-    mat-toolbar .burger {
-      display: none;
-    }
+  mat-toolbar .burger {
+    display: none;
   }
+}
