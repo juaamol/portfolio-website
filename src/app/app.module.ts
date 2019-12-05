@@ -18,6 +18,8 @@ import { WorkExperienceComponent } from './components/curriculum/work-experience
 import { EducationComponent } from './components/curriculum/education/education.component';
 import { ProfileComponent } from './components/curriculum/profile/profile.component';
 import { DetailsComponent } from './components/curriculum/details/details.component';
+import { PersonalDataComponent } from './components/curriculum/profile/personal-data/personal-data.component';
+import { SkillsComponent } from './components/curriculum/profile/skills/skills.component';
 
 const appRoutes: Routes = [
   { path: "custom-components", component: CustomComponentsComponent },
@@ -37,7 +39,9 @@ const appRoutes: Routes = [
     WorkExperienceComponent,
     EducationComponent,
     ProfileComponent,
-    DetailsComponent
+    DetailsComponent,
+    PersonalDataComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
