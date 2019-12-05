@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 html,
 body {
   height: 100%;
@@ -17,4 +16,43 @@ body {
 .mb-0,
 .my-0 {
   margin-bottom: 0;
+}
+
+.mat-progress-bar-buffer {
+  background-color: white;
+}
+
+.icon-description {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    margin-right: 1rem;
+  }
+}
+
+$my-h3: 0.625rem;
+
+.mt-h3,
+.my-h3 {
+  margin-top: $my-h3;
+}
+
+.mb-h3,
+.my-h3 {
+  margin-bottom: $my-h3;
+}
+
+.pt-h3,
+.py-h3 {
+  padding-top: $my-h3;
+}
+
+.pb-h3,
+.py-h3 {
+  padding-bottom: $my-h3;
+}
+
+.d-block {
+  display: block;
 }

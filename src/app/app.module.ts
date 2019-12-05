@@ -20,6 +20,10 @@ import { ProfileComponent } from './components/curriculum/profile/profile.compon
 import { DetailsComponent } from './components/curriculum/details/details.component';
 import { PersonalDataComponent } from './components/curriculum/profile/personal-data/personal-data.component';
 import { SkillsComponent } from './components/curriculum/profile/skills/skills.component';
+import { SkillGroupComponent } from './components/curriculum/profile/skill-group/skill-group.component';
+import { LanguageGroupComponent } from './components/curriculum/profile/language-group/language-group.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: "custom-components", component: CustomComponentsComponent },
@@ -41,7 +45,11 @@ const appRoutes: Routes = [
     ProfileComponent,
     DetailsComponent,
     PersonalDataComponent,
-    SkillsComponent
+    SkillsComponent,
+    SkillGroupComponent,
+    LanguageGroupComponent,
+    LandingPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

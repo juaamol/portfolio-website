@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  selector: "skills",
+  templateUrl: "./skills.component.html",
+  styleUrls: ["./skills.component.scss"]
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  @Input() value = 50;
+  mode = "determinate";
+  bufferValue = 75;
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }

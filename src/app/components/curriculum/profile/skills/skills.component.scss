@@ -1,0 +1,17 @@
+$margin-between: 0.625rem;
+
+label {
+  width: 100%;
+}
+
+mat-progress-bar {
+  margin-top: $margin-between;
+}
+
+.skill-container {
+  display: flex;
+}
+
+:host {
+  display: block;
+}

@@ -1,8 +1,5 @@
-.icon-description {
-  display: flex;
-  align-items: center;
+$margin-data: 0.625rem;
 
-  mat-icon {
-    margin-right: 16px;
-  }
+.icon-description {
+  margin: $margin-data 0;
 }
