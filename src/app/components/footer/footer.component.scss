@@ -1,0 +1,16 @@
+@import "../../../themes/_variables.scss";
+
+mat-icon {
+  margin: 0 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+:host {
+  display: block;
+  background-color: $secondary;
+  color: white;
+}

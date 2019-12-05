@@ -15,7 +15,10 @@ export class ComponentsService {
     "https://juaamol.github.io/html-css-examples/login-form/login-form.html"
   ];
 
-  private pageUrls = [];
+  private pageUrls = [
+    "https://juaamol.github.io/react-recipes/",
+    "https://juaamol.github.io/angular-band-template/"
+  ];
 
   constructor(private http: HttpClient) {}
 
@@ -29,7 +32,7 @@ export class ComponentsService {
   }
 
   getPagesMetadata(): Observable<MetadataRes> {
-    return this.getMetadata(this.componentUrls);
+    return this.getMetadata(this.pageUrls);
   }
 
   getComponentsMetadata(): Observable<MetadataRes> {
@@ -37,7 +40,9 @@ export class ComponentsService {
   }
 }
 
-export function processData(res: MetadataRes): Observable<Array<CompleteMetadata>> {
+export function processData(
+  res: MetadataRes
+): Observable<Array<CompleteMetadata>> {
   let allMetas: Array<CompleteMetadata> = [];
 
   for (const key of Object.keys(res.foundMetas)) {

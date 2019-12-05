@@ -20,7 +20,7 @@ export class WebsComponent implements OnInit {
 
   ngOnInit() {
     this.pagesMeta = this.comps
-      .getComponentsMetadata()
+      .getPagesMetadata()
       .pipe(switchMap((res: MetadataRes) => processData(res)));
   }
 }
