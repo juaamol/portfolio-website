@@ -11,9 +11,12 @@ import { CustomComponentsComponent } from "./components/custom-components/custom
 import { OpenGraphCardComponent } from "./components/open-graph-card/open-graph-card.component";
 import { ComponentsService } from "./services/components.service";
 import { HttpClientModule } from "@angular/common/http";
+import { WebsComponent } from './components/webs/webs.component';
+import { MetadataCardsDisplayerComponent } from './components/metadata-cards-displayer/metadata-cards-displayer.component';
 
 const appRoutes: Routes = [
-  { path: "custom-components", component: CustomComponentsComponent }
+  { path: "custom-components", component: CustomComponentsComponent },
+  { path: "pages", component: WebsComponent }
 ];
 
 @NgModule({
@@ -21,7 +24,9 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     CustomComponentsComponent,
-    OpenGraphCardComponent
+    OpenGraphCardComponent,
+    WebsComponent,
+    MetadataCardsDisplayerComponent
   ],
   imports: [
     BrowserModule,

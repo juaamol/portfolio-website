@@ -1,0 +1,21 @@
+h1,
+p {
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+}
+
+app-open-graph-card {
+  margin: 1rem 1rem;
+}
+
+@media (min-width: 768px) {
+  app-open-graph-card {
+    margin: 2rem 1rem;
+  }
+}

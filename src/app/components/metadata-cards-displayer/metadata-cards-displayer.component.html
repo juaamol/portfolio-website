@@ -1,0 +1,13 @@
+<section>
+  <ng-content select="h1"></ng-content>
+  <ng-content select="p"></ng-content>
+  <div class="main-content">
+    <app-open-graph-card
+      *ngFor="let meta of metadatas"
+      [imageSrc]="meta.imageSrc"
+      [url]="meta.url"
+      [description]="meta.description"
+      [title]="meta.title"
+    ></app-open-graph-card>
+  </div>
+</section>

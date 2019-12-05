@@ -1,7 +1,7 @@
 <nav>
   <mat-toolbar color="primary">
     <a mat-button>Home</a>
-    <a mat-button>Projects</a>
+    <a mat-button routerLink="/pages">Pages</a>
     <a mat-button routerLink="/custom-components">Components</a>
     <a mat-button>About</a>
     <button mat-button class="ml-auto">
@@ -15,7 +15,7 @@
 <mat-sidenav-container>
   <mat-sidenav mode="push" #sidenav mode="'side'" [(opened)]="opened">
     <a mat-button>Home</a>
-    <a mat-button>Projects</a>
+    <a mat-button routerLink="/pages">Pages</a>
     <a mat-button routerLink="/custom-components">Components</a>
     <a mat-button>About</a>
   </mat-sidenav>

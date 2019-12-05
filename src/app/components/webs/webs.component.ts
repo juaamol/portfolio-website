@@ -5,24 +5,22 @@ import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
 
 @Component({
-  selector: "app-custom-components",
-  templateUrl: "./custom-components.component.html",
-  styleUrls: ["./custom-components.component.scss"]
+  selector: "app-webs",
+  templateUrl: "./webs.component.html",
+  styleUrls: ["./webs.component.scss"]
 })
-export class CustomComponentsComponent implements OnInit {
+export class WebsComponent implements OnInit {
   private comps: ComponentsService;
-  public componentsMeta: Observable<Array<CompleteMetadata>>;
+  public pagesMeta: Observable<Array<CompleteMetadata>>;
 
   constructor(comps: ComponentsService) {
     this.comps = comps;
-    this.componentsMeta = new Observable();
+    this.pagesMeta = new Observable();
   }
 
   ngOnInit() {
-    this.componentsMeta = this.comps
+    this.pagesMeta = this.comps
       .getComponentsMetadata()
       .pipe(switchMap((res: MetadataRes) => processData(res)));
   }
-
-  
 }
