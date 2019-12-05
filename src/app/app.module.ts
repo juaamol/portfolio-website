@@ -13,10 +13,16 @@ import { ComponentsService } from "./services/components.service";
 import { HttpClientModule } from "@angular/common/http";
 import { WebsComponent } from './components/webs/webs.component';
 import { MetadataCardsDisplayerComponent } from './components/metadata-cards-displayer/metadata-cards-displayer.component';
+import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { WorkExperienceComponent } from './components/curriculum/work-experience/work-experience.component';
+import { EducationComponent } from './components/curriculum/education/education.component';
+import { ProfileComponent } from './components/curriculum/profile/profile.component';
+import { DetailsComponent } from './components/curriculum/details/details.component';
 
 const appRoutes: Routes = [
   { path: "custom-components", component: CustomComponentsComponent },
-  { path: "pages", component: WebsComponent }
+  { path: "pages", component: WebsComponent },
+  { path: "about", component: CurriculumComponent }
 ];
 
 @NgModule({
@@ -26,7 +32,12 @@ const appRoutes: Routes = [
     CustomComponentsComponent,
     OpenGraphCardComponent,
     WebsComponent,
-    MetadataCardsDisplayerComponent
+    MetadataCardsDisplayerComponent,
+    CurriculumComponent,
+    WorkExperienceComponent,
+    EducationComponent,
+    ProfileComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

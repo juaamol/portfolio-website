@@ -1,0 +1,21 @@
+details {
+  summary {
+    list-style: none;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+mat-icon {
+  margin-right: 16px;
+}
+
+div,
+:host {
+  overflow: auto;
+}
