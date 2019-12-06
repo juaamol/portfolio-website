@@ -60,3 +60,10 @@ $my-h3: 0.625rem;
 .text-center {
   text-align: center;
 }
+
+app-curriculum,
+app-custom-components,
+app-webs {
+  display: block;
+  padding: 1rem 2rem;
+}

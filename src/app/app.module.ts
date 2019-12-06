@@ -6,7 +6,6 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { AngularMaterialModule } from "./modules/material/angular-material/angular-material.module";
-import { Routes, RouterModule } from "@angular/router";
 import { CustomComponentsComponent } from "./components/custom-components/custom-components.component";
 import { OpenGraphCardComponent } from "./components/open-graph-card/open-graph-card.component";
 import { ComponentsService } from "./services/components.service";
@@ -24,12 +23,9 @@ import { SkillGroupComponent } from './components/curriculum/profile/skill-group
 import { LanguageGroupComponent } from './components/curriculum/profile/language-group/language-group.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CustomLinkComponent } from './components/navbar/custom-link/custom-link.component';
 
-const appRoutes: Routes = [
-  { path: "custom-components", component: CustomComponentsComponent },
-  { path: "pages", component: WebsComponent },
-  { path: "about", component: CurriculumComponent }
-];
+
 
 @NgModule({
   declarations: [
@@ -49,7 +45,8 @@ const appRoutes: Routes = [
     SkillGroupComponent,
     LanguageGroupComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    CustomLinkComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +54,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     AngularMaterialModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ComponentsService],
   bootstrap: [AppComponent]
