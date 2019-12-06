@@ -24,7 +24,7 @@ export class ComponentsService {
 
   getMetadata(urls: Array<string>) {
     const response = this.http.post<MetadataRes>(
-      "http://localhost:8081/scrape",
+      "https://juaamol-content-og-scrap.glitch.me/scrape",
       { urls }
     );
 
