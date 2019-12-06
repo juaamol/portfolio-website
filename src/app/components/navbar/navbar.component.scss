@@ -23,6 +23,10 @@ mat-sidenav-container {
     display: flex;
     flex-direction: column;
   }
+
+  custom-link {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {

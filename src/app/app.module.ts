@@ -21,9 +21,10 @@ import { PersonalDataComponent } from './components/curriculum/profile/personal-
 import { SkillsComponent } from './components/curriculum/profile/skills/skills.component';
 import { SkillGroupComponent } from './components/curriculum/profile/skill-group/skill-group.component';
 import { LanguageGroupComponent } from './components/curriculum/profile/language-group/language-group.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { CommonBackgroundComponent } from './components/common-background/common-background.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CustomLinkComponent } from './components/navbar/custom-link/custom-link.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 
@@ -44,9 +45,10 @@ import { CustomLinkComponent } from './components/navbar/custom-link/custom-link
     SkillsComponent,
     SkillGroupComponent,
     LanguageGroupComponent,
-    LandingPageComponent,
+    CommonBackgroundComponent,
     FooterComponent,
-    CustomLinkComponent
+    CustomLinkComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

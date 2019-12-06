@@ -1,0 +1,29 @@
+@import "../../../themes/_variables.scss";
+
+:host {
+  display: block;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.egg {
+  fill: $egg;
+}
+
+.wave {
+  fill: $primary;
+}
+
+.page-background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.wave-backgroud__rectangle {
+  height: 55vh;
+  background-color: $primary;
+  background: linear-gradient(0deg, $primary, $second-gradient);
+}

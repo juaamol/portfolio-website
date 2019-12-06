@@ -12,15 +12,10 @@
 <mat-sidenav-container>
   <mat-sidenav mode="push" #sidenav mode="'side'" [(opened)]="opened">
     <div class="links">
-      <a mat-button routerLink="/home" routerLinkActive="active-link">Home</a>
-      <a mat-button routerLink="/pages" routerLinkActive="active-link">Pages</a>
-      <a
-        mat-button
-        routerLink="/custom-components"
-        routerLinkActive="active-link"
-        >Components</a
-      >
-      <a mat-button routerLink="/about" routerLinkActive="active-link">About</a>
+      <custom-link to="/home">Home</custom-link>
+      <custom-link to="/pages">Pages</custom-link>
+      <custom-link to="/components">Components</custom-link>
+      <custom-link to="/about">About</custom-link>
     </div>
   </mat-sidenav>
   <ng-content></ng-content>
