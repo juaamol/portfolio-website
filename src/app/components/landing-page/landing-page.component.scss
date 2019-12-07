@@ -1,3 +1,7 @@
+$image-heigth: 352px;
+$image-width: 350px;
+$image-offset: 25px;
+
 .description-wrapper {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,23 @@
 }
 
 .egg {
-  display: none;
+  width: 100%;
+}
+
+.egg-container {
+  height: $image-heigth;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.foreground {
+  width: 100%;
+  height: 352px;
+  background: url("../../../assets/prog1.png")  center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 100;
 }
 
 a {
@@ -13,8 +33,9 @@ a {
 }
 
 @media (min-width: 576px) {
-  .egg {
-    display: block;
+  .egg-container {
+    display: flex;
+    height: unset;
   }
 
   .page-content {
@@ -22,14 +43,14 @@ a {
     align-items: center;
   }
 
-  .egg,
+  .egg-container,
   .landing-description {
     width: 50%;
   }
 }
 
 @media (min-width: 768px) {
-  .egg {
+  .egg-container {
     margin-left: auto;
   }
   .landing-description {
