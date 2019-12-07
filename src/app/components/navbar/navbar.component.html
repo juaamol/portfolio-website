@@ -4,8 +4,14 @@
     <custom-link to="/pages">Pages</custom-link>
     <custom-link to="/components">Components</custom-link>
     <custom-link to="/about">About</custom-link>
-    <button mat-button (click)="toggleOpen()" class="burger">
-      <mat-icon aria-label="menu">menu </mat-icon>
+    <button
+      mat-button
+      (click)="toggleOpen()"
+      class="burger"
+      aria-label="menu"
+      role="menu"
+    >
+      <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar>
 </nav>

@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: "pages", component: WebsComponent },
   { path: "about", component: CurriculumComponent },
   { path: "home", component: LandingPageComponent },
-  { path: "", redirectTo: "/home", pathMatch: "full" }
+  { path: "**", redirectTo: "home", pathMatch: "full" }
 ];
 
 @NgModule({

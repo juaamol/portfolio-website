@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { ComponentsService, processData, CompleteMetadata } from "../../services/components.service";
+import {
+  ComponentsService,
+  processData,
+  CompleteMetadata
+} from "../../services/components.service";
 import { MetadataRes } from "../../models/metadata.model";
 import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
@@ -7,7 +11,10 @@ import { switchMap } from "rxjs/operators";
 @Component({
   selector: "app-custom-components",
   templateUrl: "./custom-components.component.html",
-  styleUrls: ["./custom-components.component.scss"]
+  styleUrls: ["./custom-components.component.scss"],
+  host: {
+    "aria-live": "polite"
+  }
 })
 export class CustomComponentsComponent implements OnInit {
   private comps: ComponentsService;
@@ -23,6 +30,4 @@ export class CustomComponentsComponent implements OnInit {
       .getComponentsMetadata()
       .pipe(switchMap((res: MetadataRes) => processData(res)));
   }
-
-  
 }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { ComponentsService, processData, CompleteMetadata } from "../../services/components.service";
+import {
+  ComponentsService,
+  processData,
+  CompleteMetadata
+} from "../../services/components.service";
 import { MetadataRes } from "../../models/metadata.model";
 import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
@@ -7,7 +11,10 @@ import { switchMap } from "rxjs/operators";
 @Component({
   selector: "app-webs",
   templateUrl: "./webs.component.html",
-  styleUrls: ["./webs.component.scss"]
+  styleUrls: ["./webs.component.scss"],
+  host: {
+    "aria-live": "polite"
+  }
 })
 export class WebsComponent implements OnInit {
   private comps: ComponentsService;
