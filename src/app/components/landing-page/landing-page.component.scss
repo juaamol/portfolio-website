@@ -1,19 +1,39 @@
-.landing-description {
-  flex-grow: 1;
-}
-
 .description-wrapper {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
+}
+
+.egg {
+  display: none;
 }
 
 a {
   margin: 0 auto;
 }
 
-.page-content {
-  display: flex;
-  align-items: center;
+@media (min-width: 576px) {
+  .egg {
+    display: block;
+  }
+
+  .page-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .egg,
+  .landing-description {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .egg {
+    margin-left: auto;
+  }
+  .landing-description {
+    width: 30%;
+    margin-right: auto;
+  }
 }
