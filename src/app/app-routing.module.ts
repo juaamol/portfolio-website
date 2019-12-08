@@ -6,11 +6,11 @@ import { CurriculumComponent } from "./components/curriculum/curriculum.componen
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 
 const routes: Routes = [
-  { path: "components", component: CustomComponentsComponent },
-  { path: "pages", component: WebsComponent },
-  { path: "about", component: CurriculumComponent },
-  { path: "home", component: LandingPageComponent },
-  { path: "**", redirectTo: "home", pathMatch: "full" }
+  { path: "home", component: LandingPageComponent, data: { animation: "0" } },
+  { path: "pages", component: WebsComponent, data: { animation: "1" } },
+  { path: "components", component: CustomComponentsComponent, data: { animation: "2" } },
+  { path: "about", component: CurriculumComponent, data: { animation: "3" } },
+  { path: "**", redirectTo: "home", pathMatch: "full", data: { animation: "0" } }
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 <app-navbar>
-  <common-background>
-    <router-outlet></router-outlet>
+  <common-background [@routeAnimations]="prepareRoute(outlet)" class="animation-content">
+    <router-outlet #outlet="outlet"></router-outlet>
   </common-background>
 </app-navbar>
 <app-footer></app-footer>
