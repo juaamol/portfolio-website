@@ -28,7 +28,6 @@ export class WebsComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-
     this.comps
       .getPagesMetadata()
       .pipe(switchMap((res: MetadataRes) => processData(res)))

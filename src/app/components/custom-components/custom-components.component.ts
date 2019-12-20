@@ -27,6 +27,7 @@ export class CustomComponentsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loading = true;
     this.comps
       .getComponentsMetadata()
       .pipe(switchMap((res: MetadataRes) => processData(res)))
