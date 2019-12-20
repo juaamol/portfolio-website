@@ -18,16 +18,23 @@ import { switchMap } from "rxjs/operators";
 })
 export class WebsComponent implements OnInit {
   private comps: ComponentsService;
-  public pagesMeta: Observable<Array<CompleteMetadata>>;
+  public pagesMeta: CompleteMetadata[];
+  public loading: boolean;
 
   constructor(comps: ComponentsService) {
     this.comps = comps;
-    this.pagesMeta = new Observable();
+    this.loading = false;
   }
 
   ngOnInit() {
-    this.pagesMeta = this.comps
+    this.loading = true;
+
+    this.comps
       .getPagesMetadata()
-      .pipe(switchMap((res: MetadataRes) => processData(res)));
+      .pipe(switchMap((res: MetadataRes) => processData(res)))
+      .subscribe((completeMetadata: CompleteMetadata[]) => {
+        this.pagesMeta = completeMetadata;
+        this.loading = false;
+      });
   }
 }

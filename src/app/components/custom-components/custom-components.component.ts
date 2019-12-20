@@ -18,16 +18,20 @@ import { switchMap } from "rxjs/operators";
 })
 export class CustomComponentsComponent implements OnInit {
   private comps: ComponentsService;
-  public componentsMeta: Observable<Array<CompleteMetadata>>;
+  public componentsMeta: CompleteMetadata[];
+  public loading: boolean;
 
   constructor(comps: ComponentsService) {
     this.comps = comps;
-    this.componentsMeta = new Observable();
+    this.loading = false;
   }
 
   ngOnInit() {
-    this.componentsMeta = this.comps
+    this.comps
       .getComponentsMetadata()
-      .pipe(switchMap((res: MetadataRes) => processData(res)));
+      .pipe(switchMap((res: MetadataRes) => processData(res)))
+      .subscribe((completeMetadata: CompleteMetadata[]) => {
+        this.componentsMeta = completeMetadata;
+      });
   }
 }

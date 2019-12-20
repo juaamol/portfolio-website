@@ -1,4 +1,4 @@
-<app-metadata-cards-displayer [metadatas]="componentsMeta | async">
+<app-metadata-cards-displayer [metadatas]="componentsMeta">
   <h1>Custom components</h1>
   <p>
     A list of some components made with HTML and CSS (Sometimes a bit of
@@ -7,3 +7,4 @@
     sizes... among others can be changed.
   </p>
 </app-metadata-cards-displayer>
+<mat-spinner *ngIf="loading"></mat-spinner>

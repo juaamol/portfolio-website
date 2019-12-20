@@ -1,7 +1,8 @@
-<app-metadata-cards-displayer [metadatas]="pagesMeta | async">
+<app-metadata-cards-displayer [metadatas]="pagesMeta">
   <h1>Websites / Webapps</h1>
   <p>
     A list of some websites made with different technologies: React, Angular,
     ...
   </p>
 </app-metadata-cards-displayer>
+<mat-spinner *ngIf="loading"></mat-spinner>
