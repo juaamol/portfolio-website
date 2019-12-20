@@ -1,0 +1,40 @@
+name: build and deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+
+      - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Setup angular
+        run: |
+          npm install
+          npm install -g @angular/cli > /dev/null
+          npm install -g angular-cli-ghpages
+
+      - name: Build angular project
+        run: ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
+
+      - name: Deploy to github pages
+        run: angular-cli-ghpages --dir dist/portfolio-website --repo=https://juaamol:${GH_TOKEN}@github.com/juaamol/portfolio-website.git
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
