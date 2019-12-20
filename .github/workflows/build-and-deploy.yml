@@ -34,7 +34,7 @@ jobs:
         run: ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
 
       - name: Deploy to github pages
-        run: angular-cli-ghpages --dir dist/portfolio-website --repo=https://${GH_TOKEN}@github.com/juaamol/portfolio-website.git --name="juaamol" --email=jambulud@gmail.com
+        run: angular-cli-ghpages --dir dist/portfolio-website --repo=https://x-access-token:${GH_TOKEN}@github.com/juaamol/portfolio-website.git --name="juaamol" --email=jambulud@gmail.com
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
