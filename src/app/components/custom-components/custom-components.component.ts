@@ -33,6 +33,7 @@ export class CustomComponentsComponent implements OnInit {
       .pipe(switchMap((res: MetadataRes) => processData(res)))
       .subscribe((completeMetadata: CompleteMetadata[]) => {
         this.componentsMeta = completeMetadata;
+        this.loading = false;
       });
   }
 }
