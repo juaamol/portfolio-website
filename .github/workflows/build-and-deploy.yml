@@ -21,7 +21,11 @@ jobs:
           path: deploy
         
       - name: "echoes"
-        run: pwd
+        run: |
+          pwd
+          ls
+          cd ..
+          ls
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
