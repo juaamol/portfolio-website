@@ -65,13 +65,14 @@ jobs:
         run: |
           cd ${{ env.DEPLOY_DIR }}
           git status
-          git config user.emal "50924448+juaamol@users.noreply.github.com"
+          git config user.email "50924448+juaamol@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           echo ---------------------------------
           echo "${{ github.actor }}"
           echo ---------------------------------
           git add .
           git commit -m "GITHUB ACTIONS DEPLOY"
+          git push
           git status
           
         env:
