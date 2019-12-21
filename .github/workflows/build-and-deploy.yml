@@ -61,7 +61,7 @@ jobs:
           rm -r ${{ env.DEPLOY_DIR }}/*
           cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website ${{ env.DEPLOY_DIR }}
 
-      - name: ${{ env.DEPLOY_DIR }} to github pages
+      - name: Deploy to github pages
         run: |
           cd ${{ env.DEPLOY_DIR }}
           git status
