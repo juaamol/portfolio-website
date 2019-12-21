@@ -8,11 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SOURCE_DIR: source-dir
+      DEPLOY_DIR: deploy-dir
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: main
+          path: $ {{ SOURCE_DIR }}
 
       - name: Checkout tools repo
         uses: actions/checkout@v2
@@ -25,7 +28,7 @@ jobs:
           pwd
           ls 
           echo ------------------------------
-          ls main
+          ls $ {{ SOURCE_DIR }}
           echo -------------------------------
           ls deploy
 
@@ -44,20 +47,20 @@ jobs:
 
       - name: Setup angular
         run: |
-          cd deploy
+          cd $ {{ SOURCE_DIR }}
           npm install
           npm install -g @angular/cli > /dev/null
 
       - name: Build angular project
         run: |
-          cd deploy
+          cd $ {{ SOURCE_DIR }}
           ls
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
 
       - name: Prepare deploy branch
         run: |
           rm -r deploy/*
-          cp main/dist/portfolio-website deploy
+          cp $ {{ SOURCE_DIR }}/dist/portfolio-website deploy
           ls deploy
 
       - name: Deploy to github pages
