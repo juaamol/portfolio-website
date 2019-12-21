@@ -50,6 +50,7 @@ jobs:
         run: |
           rm -r ${{ env.DEPLOY_DIR }}/*
           cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
+          touch ${{ env.DEPLOY_DIR }}/.nojekyll
 
       - name: Deploy to github pages
         run: |
@@ -60,4 +61,5 @@ jobs:
           git commit -m "GITHUB ACTIONS DEPLOY"
           git remote add pages https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/juaamol/portfolio-website.git
           git push pages gh-pages
+          
           git status
