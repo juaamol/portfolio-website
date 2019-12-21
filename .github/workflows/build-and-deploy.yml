@@ -57,7 +57,7 @@ jobs:
       - name: Deploy to github pages
         run: |
           cd ${{ env.DEPLOY_DIR }}
-          git config user.email "50924448+juaamol@users.noreply.github.com"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           git add .
           git commit -m "GITHUB ACTIONS DEPLOY"
