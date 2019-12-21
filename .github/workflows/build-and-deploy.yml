@@ -11,6 +11,7 @@ jobs:
     env:
       SOURCE_DIR: source-dir
       DEPLOY_DIR: deploy-dir
+      REMOTE_REPO: https://x-access-token:${{secrets.GITHUB_DEPLOY_TOKEN}}@github.com/juaamol/portfolio-website.git
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -59,9 +60,11 @@ jobs:
           cd ${{ env.DEPLOY_DIR }}
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
+          git remote rm origin || true
+          git remote add origin "${{ env.REMOTE_REPO }}"
           git add --all
           git commit -m "GITHUB ACTIONS DEPLOY"
-          git remote add pages https://x-access-token:${{secrets.GITHUB_DEPLOY_TOKEN}}@github.com/juaamol/portfolio-website.git
+          git remote add pages ${{ env.REMOTE_REPO }}
           git push -f pages gh-pages
           
           git status
