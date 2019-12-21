@@ -23,9 +23,10 @@ jobs:
       - name: "echoes"
         run: |
           pwd
-          ls
-          cd ..
-          ls
+          ls main
+          echo hello
+          ls deploy
+
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
