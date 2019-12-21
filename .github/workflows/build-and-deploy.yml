@@ -50,6 +50,7 @@ jobs:
         run: |
           cd ${{ env.DEPLOY_DIR }}
           git pull
+          cd ..
           rm -r ${{ env.DEPLOY_DIR }}/*
           cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
 
