@@ -48,6 +48,8 @@ jobs:
 
       - name: Prepare deploy branch
         run: |
+          cd ${{ env.DEPLOY_DIR }}
+          git pull
           rm -r ${{ env.DEPLOY_DIR }}/*
           cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
 
