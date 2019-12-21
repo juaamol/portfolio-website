@@ -61,7 +61,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git add .
           git commit -m "GITHUB ACTIONS DEPLOY"
-          git remote add pages https://${{ github.actor }}:${{ secrets.GITHUB_DEPLOY_TOKEN }}@github.com/juaamol/portfolio-website.git
+          git remote add pages https://${{ secrets.GITHUB_DEPLOY_TOKEN }}@github.com/juaamol/portfolio-website.git
           git push pages gh-pages -f
           
           git status
