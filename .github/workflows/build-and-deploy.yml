@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Clone repo
         uses: actions/checkout@v1
+        run: echo pwd
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
@@ -26,6 +27,7 @@ jobs:
 
       - name: Setup angular
         run: |
+          echo: pwd
           npm install
           npm install -g @angular/cli > /dev/null
           npm install -g angular-cli-ghpages
