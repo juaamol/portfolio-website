@@ -17,6 +17,7 @@ export class ComponentsService {
 
   private pageUrls = [
     "https://juaamol.github.io/react-recipes/",
+    "https://juaamol.github.io/react-burger-builder/",
     "https://juaamol.github.io/angular-band-template/"
   ];
 
