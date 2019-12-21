@@ -42,16 +42,24 @@ jobs:
 
       - name: Setup angular
         run: |
-          echo: pwd
+          cd deploy
           npm install
           npm install -g @angular/cli > /dev/null
-          npm install -g angular-cli-ghpages
 
       - name: Build angular project
-        run: ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
+        run: |
+          cd deploy
+          ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
+
+      - name: Prepare deploy branch
+        run: |
+          rm -r deploy/*
+          cp main/dist/portfolio-website deploy
+          ls deploy
 
       - name: Deploy to github pages
-        run: angular-cli-ghpages --dir dist/portfolio-website --repo=https://${GH_TOKEN}:x-oauth-basic@github.com/juaamol/portfolio-website.git
+        run: |
+          git push https://${GH_TOKEN}:x-oauth-basic@github.com/juaamol/portfolio-website.git
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
