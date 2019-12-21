@@ -64,7 +64,6 @@ jobs:
           git remote add origin "${{ env.REMOTE_REPO }}"
           git add --all
           git commit -m "GITHUB ACTIONS DEPLOY"
-          git remote add pages ${{ env.REMOTE_REPO }}
-          git push -f pages gh-pages
+          git push -f origin gh-pages
           
           git status
