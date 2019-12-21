@@ -48,9 +48,6 @@ jobs:
 
       - name: Prepare deploy branch
         run: |
-          cd ${{ env.DEPLOY_DIR }}
-          git pull
-          cd ..
           rm -r ${{ env.DEPLOY_DIR }}/*
           cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
 
@@ -61,5 +58,6 @@ jobs:
           git config user.name "${{ github.actor }}"
           git add .
           git commit -m "GITHUB ACTIONS DEPLOY"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/juaamol/portfolio-website.git
+          git remote add pages https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/juaamol/portfolio-website.git
+          git push pages gh-pages
           git status
