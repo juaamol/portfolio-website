@@ -59,7 +59,7 @@ jobs:
       - name: Prepare deploy branch
         run: |
           rm -r ${{ env.DEPLOY_DIR }}/*
-          cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website ${{ env.DEPLOY_DIR }}
+          cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
 
       - name: Deploy to github pages
         run: |
@@ -67,6 +67,9 @@ jobs:
           echo ------------------------------
           ls
           echo ----------------------------
+          git status
+          git add .
+          git commit -m "GITHUB ACTIONS DEPLOY"
           git status
           
         env:
