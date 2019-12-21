@@ -51,6 +51,7 @@ jobs:
       - name: Build angular project
         run: |
           cd deploy
+          ls
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
 
       - name: Prepare deploy branch
