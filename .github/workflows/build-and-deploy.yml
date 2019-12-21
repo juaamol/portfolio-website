@@ -64,7 +64,9 @@ jobs:
       - name: Deploy to github pages
         run: |
           cd ${{ env.DEPLOY_DIR }}
+          echo ------------------------------
           ls
+          echo ----------------------------
           git status
           
         env:
