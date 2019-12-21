@@ -61,5 +61,5 @@ jobs:
           git config user.name "${{ github.actor }}"
           git add .
           git commit -m "GITHUB ACTIONS DEPLOY"
-          git push
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/juaamol/portfolio-website.git
           git status
