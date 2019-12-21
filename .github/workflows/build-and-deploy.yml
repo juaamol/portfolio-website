@@ -23,8 +23,10 @@ jobs:
       - name: "echoes"
         run: |
           pwd
+          ls 
+          echo ------------------------------
           ls main
-          echo hello
+          echo -------------------------------
           ls deploy
 
 
@@ -59,7 +61,9 @@ jobs:
 
       - name: Deploy to github pages
         run: |
-          git push https://${GH_TOKEN}:x-oauth-basic@github.com/juaamol/portfolio-website.git
+          cd deploy
+          git status
+          
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
