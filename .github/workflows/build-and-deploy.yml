@@ -52,7 +52,7 @@ jobs:
           cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
           cd ${{ env.DEPLOY_DIR }}
           cp index.html 404.html
-          touch ${{ env.DEPLOY_DIR }}/.nojekyll
+          touch .nojekyll
 
       - name: Deploy to github pages
         run: |
