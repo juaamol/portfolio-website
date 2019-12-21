@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: ${{ SOURCE_DIR }}
+          path: ${{ env.SOURCE_DIR }}
 
       - name: Checkout tools repo
         uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
           pwd
           ls 
           echo ------------------------------
-          ls ${{ SOURCE_DIR }}
+          ls ${{ env.SOURCE_DIR }}
           echo -------------------------------
           ls deploy
 
@@ -47,20 +47,20 @@ jobs:
 
       - name: Setup angular
         run: |
-          cd ${{ SOURCE_DIR }}
+          cd ${{ env.SOURCE_DIR }}
           npm install
           npm install -g @angular/cli > /dev/null
 
       - name: Build angular project
         run: |
-          cd ${{ SOURCE_DIR }}
+          cd ${{ env.SOURCE_DIR }}
           ls
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
 
       - name: Prepare deploy branch
         run: |
           rm -r deploy/*
-          cp ${{ SOURCE_DIR }}/dist/portfolio-website deploy
+          cp ${{ env.SOURCE_DIR }}/dist/portfolio-website deploy
           ls deploy
 
       - name: Deploy to github pages
