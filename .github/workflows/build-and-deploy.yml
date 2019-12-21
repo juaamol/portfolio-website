@@ -17,7 +17,7 @@ jobs:
         with:
           path: ${{ env.SOURCE_DIR }}
 
-      - name: Checkout tools repo
+      - name: Checkout deploy branch
         uses: actions/checkout@v2
         with:
           ref: gh-pages
