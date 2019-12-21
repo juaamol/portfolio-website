@@ -22,16 +22,6 @@ jobs:
         with:
           ref: gh-pages
           path: ${{ env.DEPLOY_DIR }}
-        
-      - name: "echoes"
-        run: |
-          pwd
-          ls 
-          echo ------------------------------
-          ls ${{ env.SOURCE_DIR }}
-          echo -------------------------------
-          ls ${{ env.DEPLOY_DIR }}
-
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
@@ -64,17 +54,9 @@ jobs:
       - name: Deploy to github pages
         run: |
           cd ${{ env.DEPLOY_DIR }}
-          git status
           git config user.email "50924448+juaamol@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
-          echo ---------------------------------
-          echo "${{ github.actor }}"
-          echo ---------------------------------
           git add .
           git commit -m "GITHUB ACTIONS DEPLOY"
           git push
           git status
-          
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
