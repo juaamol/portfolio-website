@@ -63,7 +63,7 @@ jobs:
           git remote rm origin || true
           git remote add origin "${{ env.REMOTE_REPO }}"
           git add --all
-          git commit -m "GITHUB ACTIONS DEPLOY"
+          git commit --allow-empty -m "GITHUB ACTIONS DEPLOY"
           git push -f origin gh-pages
           
           git status
