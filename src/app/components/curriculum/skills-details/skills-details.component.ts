@@ -1,34 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from "@angular/core";
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+export interface SkillDetails {
+  skill: string;
+  description: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+const SKILL_DATA: SkillDetails[] = [
+  {
+    skill: "HTML, HTML5",
+    description: `Knowledge about HTML.</br>
+      <strong>Tags</strong>: semantic and non-semantic tags<br/>
+      <strong>Accesibility</strong>: aria attributes, accesibility configurations (breadcrumbs, colors, skip to content, ...), accesible tables, ...
+      `
+  },
+  {
+    skill: "CSS, CSS3",
+    description: `
+      Knowledge about styling with CSS and CSS3.</br>
+      <strong>CSS</strong>: Styles expected in a website (colors, fonts, ...).</br>
+      <strong>CSS3</strong>: Composition of layouts with Grids and Flex-box, animations and transitions.
+      `
+  },
+  { skill: "SCSS", description: `
+      CSS extension</br>
+      Sass modules, mixins, functions, nesting, ...
+      `
+  },
+  { skill: "Javascript", description: `
+    Frontend and Backend (Node.js)
+    <strong>General language knowledge</strong>: Data structures, control flow statements, DOM modifications, syntax, ...</br>
+    <strong>Other</strong>: Clean code, basic design patterns knowledge, performance awareness.
+  ` },
+  { skill: "Typescript", description: `
+    Same experience as in Javascript but also applied to specific frameworks like <strong>Angular</strong> and <strong>React</strong>.
+  ` },
+  { skill: "Angular", description: "Beryllium" },
+  { skill: "Angular Material", description: "Nitrogen" },
+  { skill: "React", description: "Boron" },
+  { skill: "React bootstrap", description: "Oxygen" },
+  { skill: "JQuery", description: "Carbon" },
+  { skill: "Electronjs", description: "Fluorine" },
+  { skill: "Bootstrap 4", description: "Basic styling knowledge using Boostrap 4" },
+  { skill: "Flutter", description: "Neon" },
+  { skill: "Ionic 4 + Capacitor", description: "Neon" },
+  { skill: "Git", description: "Neon" },
+  { skill: "Github", description: "Neon" }
 ];
 
-
 @Component({
-  selector: 'skills-details',
-  templateUrl: './skills-details.component.html',
-  styleUrls: ['./skills-details.component.scss']
+  selector: "skills-details",
+  templateUrl: "./skills-details.component.html",
+  styleUrls: ["./skills-details.component.scss"]
 })
 export class SkillsDetailsComponent {
-
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-
+  displayedColumns: string[] = ["skill", "description"];
+  dataSource = SKILL_DATA;
 }
