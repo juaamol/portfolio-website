@@ -16,7 +16,7 @@ const SKILL_DATA: SkillDetails[] = [
   {
     skill: "CSS, CSS3",
     description: `
-      Knowledge about styling with CSS and CSS3.</br>
+      Styling with CSS and CSS3.</br>
       <strong>CSS</strong>: Styles expected in a website (colors, fonts, ...).</br>
       <strong>CSS3</strong>: Composition of layouts with Grids and Flex-box, animations and transitions.
       `
