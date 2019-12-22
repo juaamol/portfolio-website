@@ -1,3 +1,24 @@
-table {
+mat-table {
   width: 100%;
+}
+
+.skills-details-container {
+  width: 100%;
+  margin: auto;
+}
+
+:host {
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 992px) {
+  .skills-details-container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills-details-container {
+    width: 80%;
+  }
 }

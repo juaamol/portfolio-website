@@ -21,30 +21,66 @@ const SKILL_DATA: SkillDetails[] = [
       <strong>CSS3</strong>: Composition of layouts with Grids and Flex-box, animations and transitions.
       `
   },
-  { skill: "SCSS", description: `
+  {
+    skill: "SCSS",
+    description: `
       CSS extension</br>
       Sass modules, mixins, functions, nesting, ...
       `
   },
-  { skill: "Javascript", description: `
-    Frontend and Backend (Node.js)
+  {
+    skill: "Javascript",
+    description: `
+    Frontend and Backend (Node.js)</br>
     <strong>General language knowledge</strong>: Data structures, control flow statements, DOM modifications, syntax, ...</br>
     <strong>Other</strong>: Clean code, basic design patterns knowledge, performance awareness.
-  ` },
-  { skill: "Typescript", description: `
+  `
+  },
+  {
+    skill: "Typescript",
+    description: `
     Same experience as in Javascript but also applied to specific frameworks like <strong>Angular</strong> and <strong>React</strong>.
-  ` },
-  { skill: "Angular", description: "Beryllium" },
-  { skill: "Angular Material", description: "Nitrogen" },
-  { skill: "React", description: "Boron" },
-  { skill: "React bootstrap", description: "Oxygen" },
-  { skill: "JQuery", description: "Carbon" },
-  { skill: "Electronjs", description: "Fluorine" },
-  { skill: "Bootstrap 4", description: "Basic styling knowledge using Boostrap 4" },
-  { skill: "Flutter", description: "Neon" },
-  { skill: "Ionic 4 + Capacitor", description: "Neon" },
-  { skill: "Git", description: "Neon" },
-  { skill: "Github", description: "Neon" }
+  `
+  },
+  {
+    skill: "Angular",
+    description:
+      "Angular basics, styling, routing, services, RxJs Observables NgRx state management"
+  },
+  {
+    skill: "Angular Material",
+    description: "Experience with material components and components API"
+  },
+  {
+    skill: "React",
+    description:
+      "React basics, state management (Redux and Library-specific), React Hooks, Routing, class and function components, access to http content, React typescript, styling."
+  },
+  {
+    skill: "React bootstrap",
+    description: "Basic styling knowledge using React Boostrap"
+  },
+  {
+    skill: "JQuery",
+    description: "JQuery basics, DOM manipulation, AJAX, HTML events"
+  },
+  {
+    skill: "Electronjs",
+    description:
+      "Building applications for Windows. IpcMain and IpcRender comunication"
+  },
+  {
+    skill: "Bootstrap 4",
+    description: "Basic styling knowledge using Boostrap 4"
+  },
+  {
+    skill: "Ionic 4 + Capacitor",
+    description:
+      "Basic framework knowledge. Capacitor as tool to build mobile applications."
+  },
+  { skill: "Git", description: "" },
+  { skill: "Github", description: "" },
+  { skill: "Flutter", description: "" }
 ];
 
 @Component({
