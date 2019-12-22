@@ -70,4 +70,4 @@ jobs:
 
       - name: Curls
         run: |
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -X GET https://api.github.com/repos/juaamol/portfolio-website/page
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -X GET https://api.github.com/repos/juaamol/portfolio-website/pages
