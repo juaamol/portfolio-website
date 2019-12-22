@@ -25,6 +25,7 @@ import { CommonBackgroundComponent } from './components/common-background/common
 import { FooterComponent } from './components/footer/footer.component';
 import { CustomLinkComponent } from './components/navbar/custom-link/custom-link.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { SkillsDetailsComponent } from './components/curriculum/skills-details/skills-details.component';
 
 
 
@@ -48,7 +49,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     CommonBackgroundComponent,
     FooterComponent,
     CustomLinkComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    SkillsDetailsComponent
   ],
   imports: [
     BrowserModule,

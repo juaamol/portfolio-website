@@ -4,12 +4,14 @@ import { CustomComponentsComponent } from "./components/custom-components/custom
 import { WebsComponent } from "./components/webs/webs.component";
 import { CurriculumComponent } from "./components/curriculum/curriculum.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
+import { SkillsDetailsComponent } from './components/curriculum/skills-details/skills-details.component';
 
 const routes: Routes = [
   { path: "components", component: CustomComponentsComponent },
   { path: "pages", component: WebsComponent },
   { path: "about", component: CurriculumComponent },
   { path: "home", component: LandingPageComponent },
+  { path: "skills-details", component: SkillsDetailsComponent },
   { path: "**", redirectTo: "home", pathMatch: "full" }
 ];
 
