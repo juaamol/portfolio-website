@@ -80,7 +80,11 @@ const SKILL_DATA: SkillDetails[] = [
   },
   { skill: "Git", description: "" },
   { skill: "Github", description: "" },
-  { skill: "Flutter", description: "" }
+  { skill: "Flutter", description: "" },
+  {
+    skill: "Jira",
+    description: "Jira is a issue tracking and project management tool."
+  }
 ];
 
 @Component({

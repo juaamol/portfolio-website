@@ -3,7 +3,8 @@ details {
     list-style: none;
     margin-bottom: 14px;
     display: flex;
-    align-items: center;
+    align-items: center; 
+    cursor: pointer;
   }
 
   summary::-webkit-details-marker {
