@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: 
+      DIST_FOLDER: ./dist/portfolio-website
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -32,7 +34,7 @@ jobs:
       - name: Build angular project
         run: |
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
-          cp index.html 404.html
+          cp ${{ DIST_FOLDER }}/index.html ${{ DIST_FOLDER }}/404.html
           touch .nojekyll
 
 
@@ -41,4 +43,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_DEPLOY_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./dist/portfolio-website/
+          PUBLISH_DIR: ${{ DIST_FOLDER }}/
