@@ -4,30 +4,25 @@ on:
   push:
     branches:
       - master
+      - push-action
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      SOURCE_DIR: source-dir
-      DEPLOY_DIR: deploy-dir
-      REMOTE_REPO: https://x-access-token:${{secrets.GITHUB_DEPLOY_TOKEN}}@github.com/juaamol/portfolio-website.git
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          path: ${{ env.SOURCE_DIR }}
-
-      - name: Checkout deploy branch
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-          path: ${{ env.DEPLOY_DIR }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
+      
+      - name: ls-pwd
+        run: |
+          ls
+          echo -----------------------
+          pwd
 
       - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
         with:
@@ -38,36 +33,17 @@ jobs:
 
       - name: Setup angular
         run: |
-          cd ${{ env.SOURCE_DIR }}
           npm install
           npm install -g @angular/cli > /dev/null
 
       - name: Build angular project
         run: |
-          cd ${{ env.SOURCE_DIR }}
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
 
-      - name: Prepare deploy branch
-        run: |
-          rm -r ${{ env.DEPLOY_DIR }}/*
-          cp -r ${{ env.SOURCE_DIR }}/dist/portfolio-website/* ${{ env.DEPLOY_DIR }}
-          cd ${{ env.DEPLOY_DIR }}
-          cp index.html 404.html
-          touch .nojekyll
 
-      - name: Deploy to github pages
-        run: |
-          cd ${{ env.DEPLOY_DIR }}
-          git config user.email "50924448+juaamol@users.noreply.github.com"
-          git config user.name "${{ github.actor }}"
-          git remote rm origin || true
-          git remote add origin "${{ env.REMOTE_REPO }}"
-          git add --all
-          git commit --allow-empty -m "GITHUB ACTIONS DEPLOY"
-          git push -f origin gh-pages
-
-          git status
-
-      - name: Curls
-        run: |
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -X GET https://api.github.com/repos/juaamol/portfolio-website/pages/builds/latest
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_DEPLOY_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist/portfolio-website/
