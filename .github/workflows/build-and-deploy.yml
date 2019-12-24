@@ -34,7 +34,7 @@ jobs:
       - name: Build angular project
         run: |
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
-          cp ${{ DIST_FOLDER }}/index.html ${{ DIST_FOLDER }}/404.html
+          cp ${{ env.DIST_FOLDER }}/index.html ${{ env.DIST_FOLDER }}/404.html
           touch .nojekyll
 
 
@@ -43,4 +43,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_DEPLOY_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ${{ DIST_FOLDER }}/
+          PUBLISH_DIR: ${{ env.DIST_FOLDER }}/
