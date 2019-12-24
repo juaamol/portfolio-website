@@ -32,6 +32,8 @@ jobs:
       - name: Build angular project
         run: |
           ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
+          cp index.html 404.html
+          touch .nojekyll
 
 
       - name: Deploy
