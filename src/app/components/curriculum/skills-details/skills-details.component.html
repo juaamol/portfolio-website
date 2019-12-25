@@ -4,7 +4,7 @@
     Description of the skills.
   </p>
   <div class="skills-details-container">
-    <a mat-button routerLink="/about" class="back-button">
+    <a mat-button routerLink="/profile" class="back-button">
       <mat-icon>keyboard_arrow_left</mat-icon> Go back
     </a>
     <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -25,7 +25,7 @@
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
     </mat-table>
-    <a mat-button routerLink="/about" class="back-button">
+    <a mat-button routerLink="/profile" class="back-button">
       <mat-icon>keyboard_arrow_left</mat-icon> Go back
     </a>
   </div>

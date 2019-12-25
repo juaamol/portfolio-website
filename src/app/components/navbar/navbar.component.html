@@ -1,9 +1,9 @@
 <nav>
   <mat-toolbar>
     <custom-link to="/home" class="d-block ml-auto">Home</custom-link>
+    <custom-link to="/profile">Profile</custom-link>
     <custom-link to="/pages">Pages</custom-link>
     <custom-link to="/components">Components</custom-link>
-    <custom-link to="/about">About</custom-link>
     <button
       mat-button
       (click)="toggleOpen()"
@@ -19,9 +19,9 @@
   <mat-sidenav mode="push" #sidenav mode="'side'" [(opened)]="opened">
     <div class="links">
       <custom-link to="/home">Home</custom-link>
+      <custom-link to="/profile">Profile</custom-link>
       <custom-link to="/pages">Pages</custom-link>
       <custom-link to="/components">Components</custom-link>
-      <custom-link to="/about">About</custom-link>
     </div>
   </mat-sidenav>
   <ng-content></ng-content>

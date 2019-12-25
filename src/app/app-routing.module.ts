@@ -9,7 +9,7 @@ import { SkillsDetailsComponent } from './components/curriculum/skills-details/s
 const routes: Routes = [
   { path: "components", component: CustomComponentsComponent },
   { path: "pages", component: WebsComponent },
-  { path: "about", component: CurriculumComponent },
+  { path: "profile", component: CurriculumComponent },
   { path: "home", component: LandingPageComponent },
   { path: "skills-details", component: SkillsDetailsComponent },
   { path: "**", redirectTo: "home", pathMatch: "full" }
