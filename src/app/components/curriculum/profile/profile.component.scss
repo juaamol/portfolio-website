@@ -1,4 +1,23 @@
-mat-card-content button:nth-last-child(1) {
-  width: 100%;
-  margin-top: 2rem;
+@import "../../../../themes/variables";
+
+mat-card {
+  padding: 0;
+}
+
+mat-card-content {
+  padding: 0 1rem 1rem 1rem;
+
+  button:nth-last-child(1) {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.img-container {
+  padding: 3rem 3rem 0 3rem;
+  background: $dark;
+  background: linear-gradient(180deg, $primary 50%, transparent 50%);
+  img {
+    border-radius: 50%;
+  }
 }

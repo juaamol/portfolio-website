@@ -1,19 +1,31 @@
 <section>
   <mat-card>
-    <img
-      mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-      alt="Photo of a Shiba Inu"
-    />
+    <div class="img-container">
+      <img
+        mat-card-image
+        src="https://lh3.googleusercontent.com/Ag6M7OM_onsL8QFvqiKmf4WFv7VUh8O_gtEK88qjgGHSugNsiWbg_wzpA_E2EOmjrEg56tVPwbv4YlP-L74pNC3f7NYgGTxwDYmXqjeuYmoGPHfLnpn-u65wKWdadaQKd68SYy_Yyg=s988-no"
+        alt="Profile picture"
+      />
+    </div>
     <mat-card-content>
+      <h2 class="text-center">J. Andrés</h2>
+      <h3 class="text-center">Web applications developer</h3>
       <p>
-        Always trying to improve the quality of my code and UI/UX of my projects.
+        Always trying to improve the quality of my code and UI/UX in my
+        projects.
       </p>
       <personal-data></personal-data>
       <mat-divider></mat-divider>
       <skill-group class="d-block pt-h3"></skill-group>
       <language-group class="d-block mt-h3"></language-group>
-      <button mat-flat-button routerLink="/skills-details" color="primary" class="pt-h3">See all</button>
+      <button
+        mat-flat-button
+        routerLink="/skills-details"
+        color="primary"
+        class="pt-h3"
+      >
+        See all
+      </button>
     </mat-card-content>
   </mat-card>
 </section>
