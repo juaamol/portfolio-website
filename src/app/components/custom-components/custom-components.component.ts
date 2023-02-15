@@ -1,24 +1,20 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import {
   ComponentsService,
-  processData,
-  CompleteMetadata
-} from "../../services/components.service";
-import { MetadataRes } from "../../models/metadata.model";
-import { Observable } from "rxjs";
-import { switchMap } from "rxjs/operators";
+  CompleteMetadata,
+} from '../../services/components.service';
 
 @Component({
-  selector: "app-custom-components",
-  templateUrl: "./custom-components.component.html",
-  styleUrls: ["./custom-components.component.scss"],
+  selector: 'app-custom-components',
+  templateUrl: './custom-components.component.html',
+  styleUrls: ['./custom-components.component.scss'],
   host: {
-    "aria-live": "polite"
-  }
+    'aria-live': 'polite',
+  },
 })
 export class CustomComponentsComponent implements OnInit {
   private comps: ComponentsService;
-  public componentsMeta: CompleteMetadata[];
+  public componentsMeta: CompleteMetadata[] = [];
   public loading: boolean;
 
   constructor(comps: ComponentsService) {
@@ -30,7 +26,6 @@ export class CustomComponentsComponent implements OnInit {
     this.loading = true;
     this.comps
       .getComponentsMetadata()
-      .pipe(switchMap((res: MetadataRes) => processData(res)))
       .subscribe((completeMetadata: CompleteMetadata[]) => {
         this.componentsMeta = completeMetadata;
         this.loading = false;

@@ -1,24 +1,20 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import {
   ComponentsService,
-  processData,
-  CompleteMetadata
-} from "../../services/components.service";
-import { MetadataRes } from "../../models/metadata.model";
-import { Observable } from "rxjs";
-import { switchMap } from "rxjs/operators";
+  CompleteMetadata,
+} from '../../services/components.service';
 
 @Component({
-  selector: "app-webs",
-  templateUrl: "./webs.component.html",
-  styleUrls: ["./webs.component.scss"],
+  selector: 'app-webs',
+  templateUrl: './webs.component.html',
+  styleUrls: ['./webs.component.scss'],
   host: {
-    "aria-live": "polite"
-  }
+    'aria-live': 'polite',
+  },
 })
 export class WebsComponent implements OnInit {
   private comps: ComponentsService;
-  public pagesMeta: CompleteMetadata[];
+  public pagesMeta: CompleteMetadata[] = [];
   public loading: boolean;
 
   constructor(comps: ComponentsService) {
@@ -30,7 +26,6 @@ export class WebsComponent implements OnInit {
     this.loading = true;
     this.comps
       .getPagesMetadata()
-      .pipe(switchMap((res: MetadataRes) => processData(res)))
       .subscribe((completeMetadata: CompleteMetadata[]) => {
         this.pagesMeta = completeMetadata;
         this.loading = false;
