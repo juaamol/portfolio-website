@@ -26,4 +26,5 @@ export interface CompleteMetadata {
   url: string;
   description: string;
   imageSrc: string;
+  github: string;
 }
