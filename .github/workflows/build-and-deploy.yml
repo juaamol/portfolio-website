@@ -9,11 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_OPTIONS: --openssl-legacy-provider
       DIST_FOLDER: ./dist/portfolio-website
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
@@ -34,7 +33,7 @@ jobs:
 
       - name: Build angular project
         run: |
-          npm run build:ci -- --base-href "https://juaamol.github.io/portfolio-website/"
+          export NODE_OPTIONS=--openssl-legacy-provider && npm run build:ci -- --base-href "https://juaamol.github.io/portfolio-website/"
           cp ${{ env.DIST_FOLDER }}/index.html ${{ env.DIST_FOLDER }}/404.html
           touch .nojekyll
 
