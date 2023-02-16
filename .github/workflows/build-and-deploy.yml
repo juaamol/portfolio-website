@@ -20,7 +20,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: npm ci -g @angular/cli > /dev/null
       - run: export NODE_OPTIONS=--openssl-legacy-provider && npm run build:ci -- --base-href "https://juaamol.github.io/portfolio-website/"
       - run: touch .nojekyll
       - uses: actions/upload-pages-artifact@v1
