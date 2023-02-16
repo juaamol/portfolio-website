@@ -20,7 +20,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: export NODE_OPTIONS=--openssl-legacy-provider && npm run build:ci -- --base-href "https://juaamol.github.io/portfolio-website/"
+      - run: export NODE_OPTIONS=--openssl-legacy-provider && npm run build:ci
+      - run: cp dist/portfolio-website/index.html dist/portfolio-website/404.html
       - run: touch .nojekyll
       - uses: actions/upload-pages-artifact@v1
         with:
