@@ -1,16 +1,25 @@
 <section>
   <h1>Skills</h1>
-  <p>
-    Description of the skills.
-  </p>
+  <p>Description of the skills.</p>
   <div class="skills-details-container">
     <a mat-button routerLink="/profile" class="back-button">
       <mat-icon>keyboard_arrow_left</mat-icon> Go back
     </a>
-    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8"
+      matSort
+      (matSortChange)="announceSortChange($event)"
+    >
       <!-- Skill Column -->
       <ng-container matColumnDef="skill">
-        <mat-header-cell *matHeaderCellDef> Skill </mat-header-cell>
+        <mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by skill"
+        >
+          Skill
+        </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{ element.skill }} </mat-cell>
       </ng-container>
 
