@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
+    env:
       DIST_FOLDER: ./dist/portfolio-website
     steps:
       - name: Checkout
@@ -33,10 +33,9 @@ jobs:
 
       - name: Build angular project
         run: |
-          ng build --prod --base-href "https://juaamol.github.io/portfolio-website/"
+          npm run build -- --base-href "https://juaamol.github.io/portfolio-website/"
           cp ${{ env.DIST_FOLDER }}/index.html ${{ env.DIST_FOLDER }}/404.html
           touch .nojekyll
-
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
