@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { delay, map, take } from 'rxjs/operators';
+
+declare global {
+  interface Window {
+    KUTE: any;
+  }
+}
 
 const TYPING_SPEED = 200;
 
@@ -9,13 +15,24 @@ const TYPING_SPEED = 200;
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit, AfterViewInit {
   presentation: string = "Hello, I'm ";
   name: string = 'J. Andrés';
   writtenPresentation: string = '';
   writtenName: string = '';
 
   constructor() {}
+
+  ngAfterViewInit(): void {
+    const tween = window.KUTE.fromTo(
+      '#egg1',
+      { path: '#egg1' },
+      { path: '#egg2' },
+      { repeat: 999, duration: 3000, yoyo: true }
+    );
+
+    tween.start();
+  }
 
   ngOnInit() {
     interval(TYPING_SPEED)
