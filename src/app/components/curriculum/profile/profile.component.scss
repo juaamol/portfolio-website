@@ -13,6 +13,15 @@ mat-card-content {
   }
 }
 
+h2 {
+  font-size: 2rem;
+}
+
+.double-text {
+  color: $primary;
+  text-shadow: -1px 1px 0px white;
+}
+
 .img-container {
   padding: 3rem 3rem 0 3rem;
   background: $dark;

@@ -1,3 +1,5 @@
+@import "../../../themes/_variables.scss";
+
 $image-heigth: 352px;
 $image-width: 350px;
 $image-offset: 25px;
@@ -19,10 +21,18 @@ $image-offset: 25px;
   align-items: center;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+.double-text {
+  text-shadow: -2px 3px 1px #303030;
+}
+
 .foreground {
   width: 100%;
   height: 352px;
-  background: url("../../../assets/prog1.png")  center center no-repeat;
+  background: url("../../../assets/prog1.png") center center no-repeat;
   background-size: contain;
   position: absolute;
   z-index: 100;
@@ -33,6 +43,11 @@ a {
 }
 
 @media (min-width: 576px) {
+  .double-text {
+    color: $primary;
+    text-shadow: -1px 2px 1px white;
+  }
+
   .egg-container {
     display: flex;
     height: unset;
@@ -54,7 +69,7 @@ a {
     margin-left: auto;
   }
   .landing-description {
-    width: 30%;
+    width: 40%;
     margin-right: auto;
   }
 }
