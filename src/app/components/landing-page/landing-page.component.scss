@@ -23,10 +23,27 @@ $image-offset: 25px;
 
 h1 {
   font-size: 3rem;
+
+  .typewriter {
+    border-left: 0.1em solid transparent;
+    border-right: 0.1em solid transparent;
+    padding: 0 0.1em;
+    animation: blink-caret 0.5s step-end infinite;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #39ff14;
+  }
 }
 
 .double-text {
-  text-shadow: -2px 3px 1px #303030;
+  text-shadow: 4px -2px 1px #303030;
 }
 
 .foreground {
@@ -45,7 +62,7 @@ a {
 @media (min-width: 576px) {
   .double-text {
     color: $primary;
-    text-shadow: -1px 2px 1px white;
+    text-shadow: 2px -1px 1px white;
   }
 
   .egg-container {

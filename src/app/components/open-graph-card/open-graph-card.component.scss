@@ -18,10 +18,28 @@ button {
 
 .github-button {
   color: white;
+  display: flex;
+}
+
+:host {
+  opacity: 0;
+  animation: fadeIn 1s;
+  animation-delay: var(--delay, 0);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 mat-card-actions {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 0.5rem;
 }

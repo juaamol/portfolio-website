@@ -1,6 +1,6 @@
 export const WEBS = [
   {
-    title: 'Dashboard Material UI web',
+    title: 'Dashboard Material UI',
     url: 'https://juaamol.github.io/dashboard-material-ui/',
     github: 'https://github.com/juaamol/dashboard-material-ui',
     description: 'Showcase of different material-ui components',
@@ -8,7 +8,7 @@ export const WEBS = [
       'https://user-images.githubusercontent.com/50924448/210395652-921c0178-5072-4127-873a-29ad9fd61b61.PNG',
   },
   {
-    title: 'React recipes web',
+    title: 'React recipes',
     url: 'https://juaamol.github.io/react-recipes/',
     github: 'https://github.com/juaamol/react-recipes',
     description: 'Introduce the food that you want to eat and get a recipe',

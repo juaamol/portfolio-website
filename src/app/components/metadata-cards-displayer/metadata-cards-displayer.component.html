@@ -3,8 +3,9 @@
   <ng-content select="p"></ng-content>
   <div class="main-content">
     <app-open-graph-card
-      *ngFor="let meta of metadatas"
+      *ngFor="let meta of metadatas; let i = index"
       [imageSrc]="meta.imageSrc"
+      [style.--delay]="i * 0.1 + 's'"
       [url]="meta.url"
       [github]="meta.github"
       [description]="meta.description"
