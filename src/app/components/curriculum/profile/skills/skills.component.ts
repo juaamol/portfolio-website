@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  AfterViewInit,
-  AfterContentInit,
-} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
