@@ -1,12 +1,7 @@
 <div class="skill-container">
   <label>
     <ng-content></ng-content>
-    <mat-progress-bar
-      color="primary"
-      [mode]="mode"
-      [value]="value"
-      [bufferValue]="bufferValue"
-    >
+    <mat-progress-bar color="primary" [mode]="mode" [value]="delayedProgress">
     </mat-progress-bar>
   </label>
 </div>

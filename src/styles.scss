@@ -22,6 +22,10 @@ body {
   background-color: white;
 }
 
+mat-progress-bar.mat-progress-bar .mat-progress-bar-fill {
+  transition: transform 1.5s ease;
+}
+
 .icon-description {
   display: flex;
   align-items: center;
