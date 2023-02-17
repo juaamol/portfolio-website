@@ -24,14 +24,16 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngAfterViewInit(): void {
-    const tween = window.KUTE.fromTo(
-      '#egg1',
-      { path: '#egg1' },
-      { path: '#egg2' },
-      { repeat: 999, duration: 3000, yoyo: true }
-    );
+    if (window.KUTE && window.KUTE.fromTo) {
+      const tween = window.KUTE.fromTo(
+        '#egg1',
+        { path: '#egg1' },
+        { path: '#egg2' },
+        { repeat: 100, duration: 3000, yoyo: true }
+      );
 
-    tween.start();
+      tween.start();
+    }
   }
 
   ngOnInit() {
