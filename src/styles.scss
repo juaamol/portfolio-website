@@ -30,6 +30,10 @@ mat-progress-bar.mat-progress-bar .mat-progress-bar-fill {
   display: flex;
   align-items: center;
 
+  h3 {
+    font-weight: 500;
+  }
+
   mat-icon {
     margin-right: 1rem;
   }
@@ -59,6 +63,14 @@ $my-h3: 0.625rem;
 
 .d-block {
   display: block;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.font-500 {
+  font-weight: 500;
 }
 
 .text-center {

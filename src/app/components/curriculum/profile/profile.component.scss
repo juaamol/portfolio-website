@@ -9,12 +9,19 @@ mat-card-content {
 
   button:nth-last-child(1) {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
 h2 {
   font-size: 2rem;
+}
+
+:host {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 .double-text {
