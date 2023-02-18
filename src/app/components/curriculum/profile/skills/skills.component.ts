@@ -1,6 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
-import { of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { delay } from 'rxjs/operators';
 
 @Component({
@@ -8,18 +15,19 @@ import { delay } from 'rxjs/operators';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit, OnChanges {
   @Input() value: string | number = 0;
   mode: ProgressBarMode = 'determinate';
-  delayedProgress: string | number = 0;
+  subject = new BehaviorSubject<number | string>(0);
+  delayedProgress: Observable<number | string>;
 
-  constructor() {}
-
-  ngOnInit() {
-    of(this.value)
-      .pipe(delay(0))
-      .subscribe((value) => {
-        this.delayedProgress = value;
-      });
+  constructor() {
+    this.delayedProgress = this.subject.asObservable().pipe(delay(0));
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.subject.next(changes.value.currentValue || 0);
+  }
+
+  ngOnInit() {}
 }
