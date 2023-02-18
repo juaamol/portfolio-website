@@ -1,27 +1,32 @@
 <section>
   <mat-card>
     <mat-card-header>
-      <mat-icon aria-hidden="false" aria-label="School icon">
-        school
-      </mat-icon>
+      <mat-icon aria-hidden="false" aria-label="School icon"> school </mat-icon>
       <mat-card-title>Education</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <app-details>
-        <h3>University UPV</h3>
-        <time datetime="2014-08">September 2014 - 2018</time>
-        <p>
-          Computing engineering studies at "Universitat Politécnica de Valencia".
-        </p>
-      </app-details>
-      <mat-divider></mat-divider>
-      <app-details>
+      <app-time-line-separator position="start">
+        Today
+      </app-time-line-separator>
+
+      <app-details #udemy class="something">
         <h3>Udemy</h3>
         <time>Always</time>
+        <p>Learning website used to dig into different technologies.</p>
+      </app-details>
+
+      <app-time-line-separator> Sep. 2018 </app-time-line-separator>
+
+      <app-details>
+        <h3>University UPV</h3>
         <p>
-          Learning website used to dig into different technologies.
+          Computing engineering studies at "Universitat Politécnica de
+          Valencia".
         </p>
       </app-details>
+      <app-time-line-separator position="end">
+        Sep. 2014
+      </app-time-line-separator>
     </mat-card-content>
   </mat-card>
 </section>

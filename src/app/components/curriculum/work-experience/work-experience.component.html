@@ -7,9 +7,11 @@
       <mat-card-title>Work experience</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+      <app-time-line-separator position="start">
+        Feb. 2023
+      </app-time-line-separator>
       <app-details>
         <h3>Developer at Telescope</h3>
-        <time datetime="2023-02">November 2021 - February 2023</time>
         <p>
           Web applications developer, mainly front-end with React but also
           started leaning to back-end.<br /><br />
@@ -22,10 +24,15 @@
           <br />
         </p>
       </app-details>
-      <mat-divider></mat-divider>
+      <app-time-line-separator>
+        <span class="missing-time">
+          Sep. 2021
+          <mat-icon color="primary">keyboard_arrow_right</mat-icon>
+          Nov. 2021
+        </span>
+      </app-time-line-separator>
       <app-details>
         <h3>Web developer at Trilema Foundation</h3>
-        <time datetime="2021-07">February 2021 - September 2021</time>
         <p>
           Web and mobile applications developer. Front-end development with
           HTML, CSS, Angular and Ionic framework.<br /><br />
@@ -36,10 +43,9 @@
           <br />
         </p>
       </app-details>
-      <mat-divider></mat-divider>
+      <app-time-line-separator>Feb. 2021</app-time-line-separator>
       <app-details>
         <h3>Web developer at Capgemini Spain</h3>
-        <time datetime="2021-02">July 2018 - February 2021</time>
         <p>
           Web applications developer, mainly front-end side using different
           technologies like HTML, CSS, Angular, Next.js (React + Typescript),
@@ -50,15 +56,17 @@
           deadlines.<br />
         </p>
       </app-details>
-      <mat-divider></mat-divider>
+      <app-time-line-separator>July 2018</app-time-line-separator>
       <app-details>
         <h3>Internship at Capgemini Spain</h3>
-        <time datetime="2018-07">January 2018 - July 2018</time>
         <p>
           Oracle SQL databases operations, data extraction for analysis and
           resolution of incidents.
         </p>
       </app-details>
+      <app-time-line-separator position="end"
+        >Jan. 2018</app-time-line-separator
+      >
     </mat-card-content>
   </mat-card>
 </section>

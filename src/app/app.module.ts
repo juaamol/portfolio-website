@@ -26,6 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CustomLinkComponent } from './components/navbar/custom-link/custom-link.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { SkillsDetailsComponent } from './components/curriculum/skills-details/skills-details.component';
+import { TimeLineSeparatorComponent } from './components/time-line-separator/time-line-separator.component';
 
 
 
@@ -50,7 +51,8 @@ import { SkillsDetailsComponent } from './components/curriculum/skills-details/s
     FooterComponent,
     CustomLinkComponent,
     LandingPageComponent,
-    SkillsDetailsComponent
+    SkillsDetailsComponent,
+    TimeLineSeparatorComponent
   ],
   imports: [
     BrowserModule,
