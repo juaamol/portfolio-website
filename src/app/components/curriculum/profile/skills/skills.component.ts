@@ -6,7 +6,8 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { delay } from 'rxjs/operators';
 
 @Component({
