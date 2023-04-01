@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <style>
+      html,
+      body {
+        background-color: #303030;
+        color: #fff;
+        font-family: Roboto, Helvetica Neue, sans-serif;
+      }
+    </style>
+    <script>
+      var url = window.location.href;
+      url = url.replace(/\/404\.html\??.*/, "");
+      window.location.replace(url);
+    </script>
+
+    <!-- ******** SOCIAL MEDIA META ********** -->
+
+    <meta name="title" property="og:title" content="Portfolio website" />
+    <meta property="og:type" content="website" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://raw.githubusercontent.com/juaamol/portfolio-website/master/documentation/images/portfolio-website.png"
+    />
+    <meta
+      name="description"
+      property="og:description"
+      content="Website used to show different projects"
+    />
+    <meta
+      property="og:url"
+      content="https://juaamol.github.io/portfolio-website/"
+    />
+
+    <!-- ************************************* -->
+  </head>
+  <body>
+    If you are not redirected automatically, please <a href="/">click here</a>.
+  </body>
+</html>

@@ -21,7 +21,6 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: export NODE_OPTIONS=--openssl-legacy-provider && npm run build:ci
-      - run: cp dist/portfolio-website/index.html dist/portfolio-website/404.html
       - run: ls
       - run: ls dist/portfolio-website
       - run: touch .nojekyll
