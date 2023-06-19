@@ -39,6 +39,14 @@ export const WEBS = [
     imageSrc:
       'https://raw.githubusercontent.com/juaamol/portfolio-website/master/documentation/images/portfolio-website.png',
   },
+  {
+    title: 'Guitar Shop - Vue',
+    url: 'https://juaamol.github.io/guitar-shop-vue/',
+    github: 'https://github.com/juaamol/guitar-shop-vue',
+    description: 'Website to check guitars you would like to buy',
+    imageSrc:
+      'https://github.com/juaamol/guitar-shop-vue/assets/50924448/86b70456-52ca-4a61-aced-f9890b803fe0',
+  },
 ];
 
 export const COMPONENTS = [
