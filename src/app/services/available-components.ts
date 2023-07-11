@@ -1,9 +1,11 @@
 export const WEBS = [
-  { title: 'Virtual Shop Unit',
+   {
+    title: 'Virtual Shop Unit',
     url: 'https://juaamol.github.io/virtual-shop-unit/',
     github: 'https://github.com/juaamol/virtual-shop-unit',
-    description: 'Virtual Shop with interesting items for you'
-  },
+    description: 'Virtual Shop with interesting items for you',
+    imageSrc: 'https://github.com/juaamol/virtual-shop-unit/assets/50924448/f832a432-7aa3-4d8b-89fd-d8441852b6d8'
+   },
    {
     title: 'Angular Band',
     url: 'https://juaamol.github.io/angular-band-template/',
