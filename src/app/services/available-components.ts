@@ -1,4 +1,25 @@
 export const WEBS = [
+  { title: 'Virtual Shop Unit',
+    url: 'https://juaamol.github.io/virtual-shop-unit/',
+    github: 'https://github.com/juaamol/virtual-shop-unit',
+    description: 'Virtual Shop with interesting items for you'
+  },
+   {
+    title: 'Angular Band',
+    url: 'https://juaamol.github.io/angular-band-template/',
+    github: 'https://github.com/juaamol/angular-band-template',
+    description: 'Band template website',
+    imageSrc:
+      'https://raw.githubusercontent.com/wiki/juaamol/angular-band-template/assets/images/angular-band-template/angular-band-template-navbar.png',
+  },
+  {
+    title: 'Portfolio website',
+    url: 'https://juaamol.github.io/portfolio-website/',
+    github: 'https://github.com/juaamol/portfolio-website',
+    description: 'Website used to show different projects',
+    imageSrc:
+      'https://raw.githubusercontent.com/juaamol/portfolio-website/master/documentation/images/portfolio-website.png',
+  },
   {
     title: 'Dashboard Material UI',
     url: 'https://juaamol.github.io/dashboard-material-ui/',
@@ -24,22 +45,6 @@ export const WEBS = [
       'https://raw.githubusercontent.com/juaamol/react-burger-builder/master/documentation/images/burger-builder.png',
   },
   {
-    title: 'Angular Band',
-    url: 'https://juaamol.github.io/angular-band-template/',
-    github: 'https://github.com/juaamol/angular-band-template',
-    description: 'Band template website',
-    imageSrc:
-      'https://raw.githubusercontent.com/wiki/juaamol/angular-band-template/assets/images/angular-band-template/angular-band-template-navbar.png',
-  },
-  {
-    title: 'Portfolio website',
-    url: 'https://juaamol.github.io/portfolio-website/',
-    github: 'https://github.com/juaamol/portfolio-website',
-    description: 'Website used to show different projects',
-    imageSrc:
-      'https://raw.githubusercontent.com/juaamol/portfolio-website/master/documentation/images/portfolio-website.png',
-  },
-  {
     title: 'Guitar Shop - Vue',
     url: 'https://juaamol.github.io/guitar-shop-vue/',
     github: 'https://github.com/juaamol/guitar-shop-vue',
@@ -47,6 +52,13 @@ export const WEBS = [
     imageSrc:
       'https://github.com/juaamol/guitar-shop-vue/assets/50924448/86b70456-52ca-4a61-aced-f9890b803fe0',
   },
+  {
+    title: 'Patients management - Vue',
+    url: 'https://juaamol.github.io/admin-patients-vue/',
+    github: 'https://github.com/juaamol/admin-patients-vue',
+    description: 'Website to manage the pets in a vet clinic',
+    imageSrc: 'https://github.com/juaamol/admin-patients-vue/assets/50924448/db0be608-4e18-4aed-8314-ccbec147020a'
+  }
 ];
 
 export const COMPONENTS = [
