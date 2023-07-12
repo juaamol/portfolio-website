@@ -47,6 +47,14 @@ export const WEBS = [
       'https://raw.githubusercontent.com/juaamol/react-burger-builder/master/documentation/images/burger-builder.png',
   },
   {
+    title: 'Expenses Manager - Vue',
+    url: 'https://juaamol.github.io/expenses-manager/',
+    github: 'https://github.com/juaamol/expenses-manager',
+    description: 'Manage your expenses',
+    imageSrc:
+      'https://github.com/juaamol/expenses-manager/assets/50924448/f0f51f8a-eb9a-4728-abf2-2304ac41f221',
+  },
+  {
     title: 'Guitar Shop - Vue',
     url: 'https://juaamol.github.io/guitar-shop-vue/',
     github: 'https://github.com/juaamol/guitar-shop-vue',
