@@ -54,6 +54,14 @@ export const WEBS = [
     imageSrc:
       'https://github.com/juaamol/expenses-manager/assets/50924448/f0f51f8a-eb9a-4728-abf2-2304ac41f221',
   },
+   {
+    title: 'Drinks Recipes - Vue',
+    url: 'https://juaamol.github.io/drinks-recipes/',
+    github: 'https://github.com/juaamol/drinks-recipes',
+    description: 'Try a new drink. Find the recipe here.',
+    imageSrc:
+      'https://github.com/juaamol/drinks-recipes/assets/50924448/109e7114-6cd2-440e-9ab2-981860dfad86',
+  },
   {
     title: 'Guitar Shop - Vue',
     url: 'https://juaamol.github.io/guitar-shop-vue/',
