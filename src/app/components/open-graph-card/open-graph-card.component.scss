@@ -44,6 +44,14 @@ mat-card-actions {
   gap: 0.5rem;
 }
 
+mat-card-content {
+  margin-bottom: 0.5rem;
+
+  p {
+    height: 2lh;
+  }
+}
+
 @media (min-width: 576px) {
   :host {
     width: $max-card-width;

@@ -3,9 +3,13 @@ import {
   ComponentsService,
   CompleteMetadata,
 } from '../../services/components.service';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { MetadataCardsDisplayerComponent } from '../metadata-cards-displayer/metadata-cards-displayer.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-custom-components',
+  imports: [CommonModule, MatProgressSpinner, MetadataCardsDisplayerComponent],
   templateUrl: './custom-components.component.html',
   styleUrls: ['./custom-components.component.scss'],
   host: {

@@ -1,7 +1,11 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
-import { MatSort, Sort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
+import { MatCell, MatHeaderCell, MatHeaderRow, MatRow, MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { RouterLink } from '@angular/router';
 
 export interface SkillDetails {
   skill: string;
@@ -68,18 +72,18 @@ const SKILL_DATA: SkillDetails[] = [
     description: 'JQuery basics, DOM manipulation, AJAX, HTML events',
   },
   {
-    skill: 'Electronjs',
+    skill: 'DeckGL',
     description:
-      'Building applications for Windows. IpcMain and IpcRender comunication',
+      'Creation of Data Visualization tools',
   },
   {
     skill: 'Bootstrap 4',
     description: 'Basic styling knowledge using Boostrap 4',
   },
   {
-    skill: 'Ionic 4 + Capacitor',
+    skill: 'C#',
     description:
-      'Basic framework knowledge. Capacitor as tool to build mobile applications.',
+      'Creation of REST APIs with Entity Framework Core',
   },
   {
     skill: 'Express.js',
@@ -92,7 +96,6 @@ const SKILL_DATA: SkillDetails[] = [
   },
   { skill: 'Git', description: '' },
   { skill: 'Github', description: '' },
-  { skill: 'Flutter', description: '' },
   {
     skill: 'Jira',
     description: 'Jira is a issue tracking and project management tool.',
@@ -101,6 +104,7 @@ const SKILL_DATA: SkillDetails[] = [
 
 @Component({
   selector: 'skills-details',
+  imports: [CommonModule, RouterLink, MatButton, MatIcon, MatTableModule, MatSortModule],
   templateUrl: './skills-details.component.html',
   styleUrls: ['./skills-details.component.scss'],
 })

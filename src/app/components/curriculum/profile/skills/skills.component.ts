@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -5,12 +6,13 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { ProgressBarMode } from '@angular/material/progress-bar';
+import { MatProgressBar, ProgressBarMode } from '@angular/material/progress-bar';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'skills',
+  imports: [CommonModule, MatProgressBar],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
@@ -25,7 +27,7 @@ export class SkillsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.subject.next(changes.value.currentValue || 0);
+    this.subject.next(changes['value'].currentValue || 0);
   }
 
   ngOnInit() {}

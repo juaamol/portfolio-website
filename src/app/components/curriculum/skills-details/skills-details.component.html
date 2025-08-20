@@ -1,11 +1,11 @@
 <section>
   <h1>Skills</h1>
-  <p>Description of the skills.</p>
+  <p>Some of the languages, frameworks, libraries... that I have learnt all this years</p>
   <div class="skills-details-container">
-    <a mat-button routerLink="/profile" class="back-button">
+    <a matButton routerLink="/profile" class="back-button">
       <mat-icon>keyboard_arrow_left</mat-icon> Go back
     </a>
-    <mat-table
+    <table mat-table
       [dataSource]="dataSource"
       class="mat-elevation-z8"
       matSort
@@ -33,8 +33,8 @@
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-    </mat-table>
-    <a mat-button routerLink="/profile" class="back-button">
+    </table>
+    <a matButton routerLink="/profile" class="back-button">
       <mat-icon>keyboard_arrow_left</mat-icon> Go back
     </a>
   </div>

@@ -1,6 +1,9 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
-import { delay, map, take } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+import { from, of } from 'rxjs';
+import { concatMap, delay, map, scan, take } from 'rxjs/operators';
 
 declare global {
   interface Window {
@@ -12,14 +15,26 @@ const TYPING_SPEED = 200;
 
 @Component({
   selector: 'landing-page',
+  imports: [CommonModule, RouterLink, MatButtonModule],
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
 })
-export class LandingPageComponent implements OnInit, AfterViewInit {
+export class LandingPageComponent implements AfterViewInit {
   presentation: string = "Hello, I'm ";
   name: string = 'J. Andrés';
-  writtenPresentation: string = '';
-  writtenName: string = '';
+
+  writtenName$ = from(this.name.split(''))
+      .pipe(
+        concatMap((char) => of(char).pipe(delay(TYPING_SPEED))),
+        delay(TYPING_SPEED * this.presentation.length),
+        scan((acc, char) => acc + char, '')
+      );
+
+  writtenPresentation$ = from(this.presentation.split(''))
+      .pipe(
+        concatMap((char) => of(char).pipe(delay(TYPING_SPEED))),
+        scan((acc, char) => acc + char, '')
+      )
 
   constructor() {}
 
@@ -34,26 +49,5 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
 
       tween.start();
     }
-  }
-
-  ngOnInit() {
-    interval(TYPING_SPEED)
-      .pipe(
-        take(this.presentation.length + 1),
-        map((i) => this.presentation.substring(0, i))
-      )
-      .subscribe((written) => {
-        this.writtenPresentation = written;
-      });
-
-    interval(TYPING_SPEED)
-      .pipe(
-        take(this.name.length + 1),
-        map((i) => this.name.substring(0, i)),
-        delay(TYPING_SPEED * (this.name.length + 1))
-      )
-      .subscribe((written) => {
-        this.writtenName = written;
-      });
   }
 }

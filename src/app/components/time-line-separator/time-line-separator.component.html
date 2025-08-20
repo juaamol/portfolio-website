@@ -1,5 +1,5 @@
 <div class="separator">
   <div class="bar" *ngIf="position == 'end' || position == 'center'"></div>
-  <button mat-button><ng-content></ng-content></button>
+  <button matButton="text"><ng-content></ng-content></button>
   <div class="bar" *ngIf="position == 'start' || position == 'center'"></div>
 </div>
