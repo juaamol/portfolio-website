@@ -24,15 +24,10 @@ h2 {
   flex-direction: column;
 }
 
-.double-text {
-  color: $primary;
-  text-shadow: 1px -1px 0px white;
-}
-
 .img-container {
   padding: 3rem 3rem 0 3rem;
   background: $dark;
-  background: linear-gradient(180deg, $primary 50%, transparent 50%);
+  background: linear-gradient(180deg, var(--mat-sys-on-primary) 50%, transparent 50%);
   img {
     width: 100%;
     border-radius: 50%;

@@ -6,12 +6,12 @@
 
   .bar {
     height: 8px;
-    border-left: solid 2px #c2185b;
-    border-right: solid 2px #c2185b;
+    border-left: solid 2px var(--mat-sys-primary);
+    border-right: solid 2px var(--mat-sys-primary);
   }
 
   [matButton] {
-    border: dashed 2px #c2185b;
+    border: dashed 2px var(--mat-sys-primary);
     pointer-events: none;
   }
 }

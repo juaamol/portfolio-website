@@ -1,13 +1,10 @@
-@import "../../../themes/variables";
-
 mat-toolbar {
   height: auto;
   padding: 0.4rem 0;
 }
 
 .page-logo {
-  color: $primary;
-  text-shadow: 2px -1px white;
+  color: var(--mat-sys-primary);
   font-style: italic;
   font-size: 2rem;
   margin: 0 1rem;

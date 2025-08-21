@@ -1,3 +1,3 @@
-<a matButton [routerLink]="to" routerLinkActive="active-link">
+<a [matButton]="rla.isActive ? 'filled' : 'text'" [routerLink]="to" routerLinkActive #rla="routerLinkActive">
   <ng-content></ng-content>
 </a>

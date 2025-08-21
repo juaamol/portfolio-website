@@ -12,7 +12,7 @@
 }
 
 .wave {
-  fill: $primary;
+  fill: var(--mat-sys-on-primary);
 }
 
 .page-background {
@@ -24,6 +24,6 @@
 
 .wave-backgroud__rectangle {
   height: 55vh;
-  background-color: $primary;
-  background: linear-gradient(0deg, $primary, $second-gradient);
+  background-color: var(--mat-sys-on-primary);
+  background: linear-gradient(0deg, var(--mat-sys-on-primary), $second-gradient);
 }

@@ -1,8 +1,4 @@
-@import "../../../themes/_variables.scss";
-
 $image-heigth: 352px;
-$image-width: 350px;
-$image-offset: 25px;
 
 .description-wrapper {
   display: flex;
@@ -42,10 +38,6 @@ h1 {
   }
 }
 
-.double-text {
-  text-shadow: 4px -2px 1px #303030;
-}
-
 .foreground {
   width: 100%;
   height: 352px;
@@ -60,11 +52,6 @@ a {
 }
 
 @media (min-width: 576px) {
-  .double-text {
-    color: $primary;
-    text-shadow: 2px -1px 1px white;
-  }
-
   .egg-container {
     display: flex;
     height: unset;
