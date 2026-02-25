@@ -90,11 +90,11 @@ export const COMPONENTS = [
   },
    {
     title: 'Music Pentagram Tree',
-    url: 'https://juaamol.github.io/html-css-examples/music-shelf/music-shelf.html',
+    url: 'https://juaamol.github.io/html-css-examples/music-themed-tree/music-themed-tree.html',
     github: 'https://github.com/juaamol/html-css-examples',
     description: 'List with music pentagram style',
     imageSrc:
-      'https://juaamol.github.io/html-css-examples/documentation/images/music-shelf/music-shelf.png',
+      'https://juaamol.github.io/html-css-examples/documentation/images/music-themed-tree/music-themed-tree.png',
   },
   {
     title: 'Dual color card',
