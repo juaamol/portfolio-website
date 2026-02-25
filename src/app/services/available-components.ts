@@ -80,13 +80,21 @@ export const WEBS = [
 ];
 
 export const COMPONENTS = [
-  {
-    title: 'Book index',
-    url: 'https://juaamol.github.io/html-css-examples/index-component/index-component.html',
+   {
+    title: 'Music Shelf',
+    url: 'https://juaamol.github.io/html-css-examples/music-shelf/music-shelf.html',
     github: 'https://github.com/juaamol/html-css-examples',
-    description: 'Book-like index with dots.',
+    description: 'Music Book-like cards',
     imageSrc:
-      'https://juaamol.github.io/html-css-examples/documentation/images/index-component.png',
+      'https://juaamol.github.io/html-css-examples/documentation/images/music-shelf/music-shelf.png',
+  },
+   {
+    title: 'Music Pentagram Tree',
+    url: 'https://juaamol.github.io/html-css-examples/music-shelf/music-shelf.html',
+    github: 'https://github.com/juaamol/html-css-examples',
+    description: 'List with music pentagram style',
+    imageSrc:
+      'https://juaamol.github.io/html-css-examples/documentation/images/music-shelf/music-shelf.png',
   },
   {
     title: 'Dual color card',
@@ -103,6 +111,14 @@ export const COMPONENTS = [
     description: 'Card component that opens on hover.',
     imageSrc:
       'https://juaamol.github.io/html-css-examples/documentation/images/open-card/open-card.png',
+  },
+   {
+    title: 'Book index',
+    url: 'https://juaamol.github.io/html-css-examples/index-component/index-component.html',
+    github: 'https://github.com/juaamol/html-css-examples',
+    description: 'Book-like index with dots.',
+    imageSrc:
+      'https://juaamol.github.io/html-css-examples/documentation/images/index-component.png',
   },
   {
     title: 'Game circle menu',
