@@ -23,20 +23,20 @@ export const WEBS = [
       'https://raw.githubusercontent.com/juaamol/portfolio-website/master/documentation/images/portfolio-website.png',
   },
   {
+    title: 'Repertoire Shelf (In Progress)',
+    url: 'https://juaamol.github.io/repertoire-manager-ng/',
+    github: 'https://github.com/juaamol/repertoire-manager-ng',
+    description: 'Track and monitor practice progress for your musical repertoire',
+    imageSrc:
+      'https://raw.githubusercontent.com/juaamol/repertoire-manager-ng/main/documentation/repertoire-shelf.png',
+  },
+  {
     title: 'Dashboard Material UI',
     url: 'https://juaamol.github.io/dashboard-material-ui/',
     github: 'https://github.com/juaamol/dashboard-material-ui',
     description: 'Showcase of different material-ui components',
     imageSrc:
       'https://user-images.githubusercontent.com/50924448/210395652-921c0178-5072-4127-873a-29ad9fd61b61.PNG',
-  },
-  {
-    title: 'React recipes',
-    url: 'https://juaamol.github.io/react-recipes/',
-    github: 'https://github.com/juaamol/react-recipes',
-    description: 'Introduce the food that you want to eat and get a recipe',
-    imageSrc:
-      'https://raw.githubusercontent.com/wiki/juaamol/react-recipes/assets/images/react-recipes/react-recipes-main-page.png',
   },
   {
     title: 'Burger builder',
