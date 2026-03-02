@@ -23,7 +23,7 @@ export const WEBS = [
       'https://raw.githubusercontent.com/juaamol/portfolio-website/master/documentation/images/portfolio-website.png',
   },
   {
-    title: 'Repertoire Shelf (In Progress)',
+    title: 'Repertoire Shelf -> WIP',
     url: 'https://juaamol.github.io/repertoire-manager-ng/',
     github: 'https://github.com/juaamol/repertoire-manager-ng',
     description: 'Track and monitor practice progress for your musical repertoire',
